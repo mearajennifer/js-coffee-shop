@@ -48,7 +48,29 @@
 
     // Set these variables to their DOM elements
 
-    let coffeeImage;
+    // let coffeeImage;
+    const coffeeImage = document.querySelector('#coffee-image');
+    coffeeImage.setAttribute('src', 'static/coffee_beans.jpg');
+
+    function makeCoffee() {
+
+    	function makeCoffeeOne(){
+    		coffeeImage.setAttribute('src', 'static/coffee_beans.jpg');
+    	}
+    	function makeCoffeeTwo(){
+    		coffeeImage.setAttribute('src', 'static/coffee_machine.jpg');
+    	}
+    	function makeCoffeeThree(){
+    		coffeeImage.setAttribute('src', 'static/coffee_mug.jpg');
+    	}
+
+    	setTimeout(makeCoffeeOne, 2500);
+    	setTimeout(makeCoffeeThree, 1500);
+    	makeCoffeeTwo();
+    }
+
+    coffeeImage.addEventListener('click', makeCoffee);
+
     let revenueMessage;
 
     // use this JavaScript object in further study step
